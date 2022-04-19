@@ -1,0 +1,112 @@
+  .det (@color, @font-size, @font-family: 'regular') {
+    color: @color;
+    font-size: @font-size;
+    font-family: @font-family;
+  }
+
+  .anim(@s: 0.2s) {
+    transition: all @s ease-in-out;
+    -webkit-transition: all @s ease-in-out;
+    -moz-transition: all @s ease-in-out;
+    -o-transition: all @s ease-in-out;
+    -ms-transition: all @s ease-in-out;
+  }
+
+  .trf-t (@x, @y) {
+    -webkit-transform: translate(@x, @y);
+    -moz-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+  }
+
+  .trf-r (@angle) {
+    -webkit-transform: rotate(@angle);
+    -moz-transform: rotate(@angle);
+    -ms-transform: rotate(@angle);
+    -o-transform: rotate(@angle);
+    transform: rotate(@angle);
+  }
+
+  .trf-s (@x, @y) {
+    -webkit-transform: scale(@x, @y);
+    -moz-transform: scale(@x, @y);
+    -ms-transform: scale(@x, @y);
+    -o-transform: scale(@x, @y);
+    transform: scale(@x, @y);
+  }
+
+  .border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+  }
+
+  .box-shadow(@top: 0, @left: 0, @blur: 20px, @color: rgba(0, 0, 0, 0.2)) {
+    -webkit-box-shadow: @top @left @blur @color;
+    -moz-box-shadow: @top @left @blur @color;
+    box-shadow: @top @left @blur @color;
+  }
+
+  .flex(@hor: space-between, @ver: center) {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: @hor;
+    align-items: @ver;
+  }
+
+  .flex-c(@hor: space-between, @ver: center) {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: @hor;
+    align-items: @ver;
+  }
+
+  .ellipsis() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .square(@siz-x, @siz-y, @red) {
+    width: @siz-x;
+    height: @siz-y;
+    overflow: hidden;
+    border-radius: @red;
+    margin: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .img-auto(@pad: 56%) {
+    height: 0;
+    padding-top: @pad;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }

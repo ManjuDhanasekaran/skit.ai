@@ -1,0 +1,410 @@
+.footer {
+    padding: 80px 0 30px;
+    position: relative;
+    display: flex;
+
+    hr {
+        margin-top: 50px;
+    }
+}
+
+
+.small-foo-note small {
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #626468;
+    font-size: 14px;
+    max-width: 260px;
+    line-height: 1.7;
+
+    display: block;
+
+}
+
+.foo-logo-sec {
+    width: 100%;
+
+    .foo-logo {
+        margin-bottom: 16px;
+        width: 160px;
+    }
+}
+
+.quick-links {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.foo-head {
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--black);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.foo-logo-sec,
+.link-section,
+.foo-bottom-sec {
+
+    ul {
+        padding-right: 0px;
+        margin-bottom: 24px;
+    }
+
+    li {
+        margin: 10px 0;
+        max-width: 290px;
+    }
+
+    li,
+    a {
+        font-family: 'inter-reg';
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #626468;
+        display: block;
+        line-height: 1.7;
+    }
+
+
+    a:hover {
+        color: rgba(0, 0, 0, 1);
+    }
+
+}
+
+.link-section ul:last-child {
+    margin-bottom: 0;
+}
+
+.foo-copy {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #626468;
+    font-size: 14px;
+    text-align: center;
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.3;
+
+}
+
+
+
+.svg path {
+    fill: #000 !important;
+}
+
+.foo-bottom-sec {
+    display: none;
+}
+
+.social-links {
+    position: absolute;
+    top: 70px;
+
+    ul {
+        display: flex;
+
+        li {
+            margin-right: 12px;
+        }
+
+        a {
+            border-radius: 50%;
+            background: rgba(229, 241, 247, 1);
+            width: 33px;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                fill: #114c90;
+            }
+
+            .icon {
+                pointer-events: none;
+            }
+
+        }
+
+        a:hover .icon,
+        a:focus .icon {
+            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+        }
+    }
+}
+
+
+
+/* COOKIE */
+.cookie-popup {
+
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    bottom: 20px;
+    left: 1%;
+    background-color: #fff;
+    box-shadow: 0 8px 24px rgb(234, 234, 242, 0.71%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 14px 20px;
+    transition: opacity .5s;
+    opacity: 0;
+
+    .button {
+        min-width: auto;
+    }
+}
+
+.cookie-popup--not-accepted {
+    opacity: 1;
+    animation: cookie-popup-in .5s ease forwards;
+    animation-delay: .2s;
+    z-index: 99;
+    height: auto;
+}
+
+
+
+
+.cookie-popup .cookie-icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 12px;
+}
+
+.cookie-popup h2 {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: #000;
+    margin-bottom: 0;
+    margin-right: 1rem;
+}
+
+.button-grd-line {
+    width: 145px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    border: 0;
+    outline: none;
+    overflow: hidden;
+}
+
+.cookie-popup .button-grd-line {
+    margin-left: auto;
+}
+
+.footer.bdr {
+    border-top: 1px solid rgba(169, 169, 169, 0.26);
+}
+
+@media all and (max-width:1600px) {}
+
+@media all and (max-width:1440px) {}
+
+@media all and (max-width:1336px) {}
+
+@media all and (max-width:1280px) {
+    .footer {
+        padding: 70px 0 30px;
+    }
+}
+
+@media all and (max-width:1200px) {
+    .footer {
+        padding: 60px 0;
+    }
+}
+
+@media all and (max-width:1024px) {
+
+    .foo-logo-sec li,
+    .link-section li,
+    .foo-bottom-sec li,
+    .foo-logo-sec a,
+    .link-section a,
+    .foo-bottom-sec a {
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .foo-logo-sec .foo-logo {
+        width: 140px;
+    }
+}
+
+@media all and (max-width:990px) {}
+
+@media all and (max-width:800px) {
+    .footer .f-row {
+        flex-direction: column;
+    }
+
+    .foo-logo-sec,
+    .quick-links {
+        width: 100%;
+    }
+
+    .quick-links {
+        flex-wrap: wrap;
+    }
+
+    .foo-logo-sec .foo-logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .foo-logo-sec .foo-copy,
+    .foo-logo-sec .social-logo {
+        display: none;
+
+    }
+
+    .foo-bottom-sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .link-section {
+        width: 50%;
+        margin-bottom: 12px;
+        padding-right: 24px;
+    }
+
+    .social-links {
+        top: 60px;
+    }
+
+
+    .foo-lp .link-section {
+        width: auto;
+    }
+}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width:640px) {
+    .footer {
+        padding: 40px 0;
+    }
+
+    .social-logo {
+        display: flex;
+        margin: 30px 0 12px;
+    }
+
+    .foo-logo-sec li,
+    .link-section li,
+    .foo-bottom-sec li,
+    .foo-logo-sec a,
+    .link-section a,
+    .foo-bottom-sec a {
+        font-size: 13px;
+    }
+
+
+    .foo-copy {
+        line-height: 1.9;
+    }
+
+    .foo-logo-sec .foo-logo {
+        width: 120px;
+    }
+
+    .foo-copy {
+        font-size: 13px;
+    }
+
+
+}
+
+@media all and (max-width: 576px) {
+
+    .social-logo {
+        margin: 10px 0 12px;
+    }
+
+}
+
+@media all and (max-width:480px) {
+
+    .link-section:first-child,
+    .link-section:last-child {
+        width: 100%;
+    }
+
+    .foo-lp .link-section:first-child {
+        width: auto;
+    }
+
+    .foo-logo-sec .foo-logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .social-links {
+        position: relative;
+        bottom: 0px;
+        top: auto;
+
+    }
+
+    .foo-lp .social-links {
+        position: absolute;
+        bottom: 0px;
+        top: 60px;
+
+    }
+
+    .add-sec {
+        width: 100%;
+
+        li {
+            max-width: 100%;
+        }
+    }
+
+    .footer hr {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media all and (max-width:480px) {}
+
+@media all and (max-width:400px) {
+
+   
+}
+
+@media all and (max-width:375px) {
+    .foo-lp .link-section,
+    .foo-lp .link-section:first-child {
+        width: 100%;
+    }
+
+    .foo-lp .social-links {
+        position: relative;
+        bottom: 0px;
+        top: auto;
+
+    }
+}
